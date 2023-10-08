@@ -16,10 +16,10 @@ jobs:
 
       - name: "web-ext lint"
         uses: kewisch/action-web-ext@v1
-        with:
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
           cmd: lint
-          source: .
           channel: listed
           ignoreFiles: '[ "package.json","package-lock.json","yarn.lock", ".github" ]'
 
